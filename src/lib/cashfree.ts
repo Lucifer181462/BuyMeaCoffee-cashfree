@@ -15,7 +15,13 @@ export const openCashfree = async (
   onFailure: () => void
 ) => {
   try {
-    const res = await fetch("http://localhost:4000/api/create-order", {
+    const res = await fetch("fetch("/api/create-order", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ amount }),
+});", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),
